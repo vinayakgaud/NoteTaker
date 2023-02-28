@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap');
+
+:root{
+	--notoSans: 'Noto Sans', sans-serif;;
+	--satisfy: 'Satisfy', cursive;
+}
+*, html{
+	margin: 0px;
+	padding: 0px;
+	box-shadow: none;
+	font-family: var(--notoSans);
+}
+
+.purple{
+	background: #7e57c2;
+}
+
+.light-purple{
+	background: #b39ddb;
+}

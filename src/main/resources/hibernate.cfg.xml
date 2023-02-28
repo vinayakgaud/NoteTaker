@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- configuration file for hibernate we can give this file any name but it is standard to name it like this -->
+
+<!-- hibernate dtd  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<!-- setting up connection to database -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/mavenhibernate</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- changing dialect of hibernate to match with mysql because using MySQL v5+-->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- to auto create the table, create - will create new table always, 
+		update - will create table if not present else update -->
+		<property name="hbm2ddl.auto"><!-- create - drops the table if exist -->update</property>
+		<!-- if we want hibernate to show sql queries also  
+		and we can also use format property if we want it formatted -->
+		<property name="show_sql">true</property>
+		<!-- formatting sql query -->
+		<property name="format_sql">true</property>
+		<mapping class="entities.tables.Note" />
+	</session-factory>
+</hibernate-configuration>
